@@ -11,6 +11,8 @@
 	"libVersion": "1.6.6",
 	"appid": "wxc62348fc77d5a0d1",
 	"projectname": "yougou",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

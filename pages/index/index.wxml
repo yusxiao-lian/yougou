@@ -1,2 +1,38 @@
-<!--index.wxml-->
-<view>首页</view>
+<view class="container">
+  <!-- 头部搜索栏 -->
+  <search></search>
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiper indicator-dots circular class="swiper" indicator-color="rgba(255,255,255,0.4)" indicator-active-color="rgba(255,255,255,1)">
+      <block wx:for="{{banner}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item.image_src}}" mode="aspectFit"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 菜单导航 -->
+  <view class="navs">
+    <block wx:for="{{navs}}" wx:key="index">
+      <navigator url="{{item.url}}" open-type="switchTab">
+        <image src="{{item.image_src}}" mode="aspectFit"></image>
+      </navigator>
+    </block>
+  </view>
+  <!-- 商品内容区 -->
+  <view class="products" wx:for="{{products}}" wx:key="index">
+    <view class="title">
+      <image src="{{item.floor_title.image_src}}"  mode="aspectFill"></image>
+    </view>
+    <view class="content">
+      <view class="content-left">
+        <image src="{{item.product_list[0].image_src}}"  mode="aspectFill"></image>
+      </view>
+      <view class="content-right">
+        <block wx:for="{{item.product_list}}" wx:key="index" wx:if="{{index > 0}}" wx:for-item="value">
+          <image src="{{value.image_src}}"  mode="aspectFill"></image>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
