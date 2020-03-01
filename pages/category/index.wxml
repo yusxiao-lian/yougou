@@ -1,2 +1,29 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view class="container">
+  <!-- 搜索栏 -->
+  <search></search>
+  <!-- 内容区 -->
+  <view class="main">
+    <!-- 左侧菜单 -->
+    <view class="menus">
+      <block wx:for="{{menusData}}" wx:key="index">
+        <view class="menus-item {{currentpage === index ? 'active' : ''}}" bindtap="handlechange"
+        data-index="{{index}}">{{item.cat_name}}</view>
+      </block>
+    </view>
+    <!-- 右侧内容 -->
+    <view class="content">
+      <block wx:for="{{menusData[currentpage].children}}" wx:key="index">
+        <view class="catogory">/<text>{{item.cat_name}}</text>/</view>
+        <view class="brand">
+          <block wx:for="{{item.children}}" wx:key="listindex" wx:for-item="listitem"
+          wx:for-index="listindex">
+            <navigator url="">
+              <image src="{{listitem.cat_icon}}" mode="widthFix"></image>
+              <text>{{listitem.cat_name}}</text>
+            </navigator>
+          </block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

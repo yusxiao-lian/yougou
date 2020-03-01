@@ -1,1 +1,66 @@
-/* pages/category/index.wxss */
+.main{
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  top: 100rpx;
+  bottom: 0;
+  overflow: hidden;
+  width: 750rpx;
+}
+.main .menus{
+  width: 200rpx;
+  height: 100%;
+  overflow: auto;
+  background: #f4f4f4;
+}
+.main .menus .menus-item{
+  position: relative;
+  text-align: center;
+  padding: 20rpx 0;
+  border-bottom: 1px solid rgb(224, 223, 223);
+}
+.main .menus .active::after{
+  position: absolute;
+  display: block;
+  content: '';
+  height: 60rpx;
+  width: 3px;
+  background: #eb4450;
+  top: 15rpx;
+}
+.main .menus .active{
+  color: red;
+}
+.main .content{
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+  padding: 20rpx;
+}
+.content .catogory{
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #999;
+}
+.content .catogory text{
+  margin: 0 20rpx;
+  color: black;
+}
+.content .brand{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.content .brand navigator{
+  display: flex;
+  width: 33%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+.content .brand navigator image{
+  width: 100%;
+}
