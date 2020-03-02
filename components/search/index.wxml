@@ -2,6 +2,6 @@
 <view class="search">
   <view class="search-input">
     <icon type="search" size="18"></icon>
-    搜索
+    {{keyword}}
   </view>
 </view>

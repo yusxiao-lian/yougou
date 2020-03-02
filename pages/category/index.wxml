@@ -17,7 +17,7 @@
         <view class="brand">
           <block wx:for="{{item.children}}" wx:key="listindex" wx:for-item="listitem"
           wx:for-index="listindex">
-            <navigator url="">
+            <navigator url="/pages/goods_list/index?keyword={{listitem.cat_name}}">
               <image src="{{listitem.cat_icon}}" mode="widthFix"></image>
               <text>{{listitem.cat_name}}</text>
             </navigator>

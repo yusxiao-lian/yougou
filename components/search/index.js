@@ -1,10 +1,16 @@
 // components/search/index.js
 Component({
+
+  // 声明外部样式类
+  externalClasses: [ 'search' ],
   /**
    * 组件的属性列表
    */
   properties: {
-
+    keyword: {
+      type: String,
+      value: "搜索"
+    }
   },
 
   /**
@@ -20,4 +26,6 @@ Component({
   methods: {
 
   }
+
+  
 })
