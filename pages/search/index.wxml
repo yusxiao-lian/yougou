@@ -1,0 +1,32 @@
+<!--pages/search/index.wxml-->
+<view class="container">
+  <!-- 搜索栏 -->
+  <view class="search">
+    <view class="searchinput">
+      <icon type="search" size="18"></icon>
+      <input placeholder="请输入你想要的商品"
+      bindinput="handlechange"></input>
+    </view>
+    <view class="cancel">
+      取消
+    </view>
+    <!-- 模糊搜索列表 -->
+    <view class="searchlist" wx:if="{{goodsList.length}}">
+      <block wx:for="{{goodsList}}" wx:key="index">
+        <navigator url="">{{item.goods_name}}</navigator>
+      </block>
+    </view>
+  </view>
+
+  <!-- 历史搜索记录 -->
+  <view class="historySearch">
+    <view class="top">
+      <text>历史搜索</text>
+      <icon type="clear" size="18"></icon>
+    </view>
+    <view class="historylist">
+      <navigator url=""  class="item">喜爱哦米</navigator>
+      <navigator url=""  class="item">喜爱米</navigator>
+    </view>
+  </view>
+</view>

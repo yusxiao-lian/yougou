@@ -1,6 +1,10 @@
 /* pages/goods_list/index.wxss */
 .searchbox{
-  background: #eee!important;
+  background-color: #eee!important;
+  
+}
+.align{
+  justify-content: start!important;
 }
 .tab {
   display: flex;

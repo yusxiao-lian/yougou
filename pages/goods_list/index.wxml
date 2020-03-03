@@ -1,6 +1,6 @@
 <view class="container">
   <!-- 搜索框 -->
-  <search search="searchbox"></search>
+  <search keyword="{{keyword}}" changestyle="searchbox" align="align"></search>
   <!-- tab栏 -->
   <view class="tab">
     <block wx:for="{{['综合', '销量', '价格']}}" wx:key="item">

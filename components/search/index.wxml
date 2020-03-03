@@ -1,7 +1,9 @@
 <!--components/search/index.wxml-->
-<view class="search">
-  <view class="search-input">
-    <icon type="search" size="18"></icon>
-    {{keyword}}
+<navigator url="/pages/search/index">
+  <view class="search changestyle">
+    <view class="search-input align">
+      <icon type="search" size="18"></icon>
+      {{keyword}}
+    </view>
   </view>
-</view>
+</navigator>

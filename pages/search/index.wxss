@@ -1,0 +1,75 @@
+/* pages/search/index.wxss */
+.search{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100rpx;
+  padding: 20rpx;
+  background: #eee;
+}
+.searchinput{
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: #fff;
+  flex: 1;
+  padding: 0 20rpx;
+  font-size: 18px;
+}
+.searchinput input{
+  background: #fff;
+  flex: 1;
+  color: #c9c9c9;
+  
+}
+.searchinput icon{
+  margin-right: 10rpx;
+}
+.search .cancel{
+  margin-left: 20rpx;
+  height: 60rpx;
+  width: 160rpx;
+  border: 1px solid #ddd;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.historySearch{
+  padding: 0 20rpx;
+}
+.historySearch .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 20rpx 0;
+}
+.historySearch .historylist{
+  display: flex;
+}
+.historySearch .historylist navigator{
+  padding: 20rpx;
+  background: #ddd;
+  margin:0 20rpx 20rpx 0;
+  font-size: 16px;
+}
+.searchlist{
+  position: absolute;
+  height: 50vh;
+  width: 95%;
+  box-sizing: border-box;
+  overflow: auto;
+  top: 80rpx;
+  background: #fff;
+  border:1px #ccc solid;
+  padding: 0 20rpx 20rpx;
+}
+.searchlist navigator{
+  border-bottom: 1px #eee solid;
+  font-size:14px;
+  padding: 10rpx 0;
+}
