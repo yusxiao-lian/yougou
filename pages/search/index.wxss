@@ -50,6 +50,7 @@
 }
 .historySearch .historylist{
   display: flex;
+  flex-wrap: wrap;
 }
 .historySearch .historylist navigator{
   padding: 20rpx;

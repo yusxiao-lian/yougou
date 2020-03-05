@@ -5,9 +5,10 @@
     <view class="searchinput">
       <icon type="search" size="18"></icon>
       <input placeholder="请输入你想要的商品"
-      bindinput="handlechange"></input>
+      bindinput="handlechange" value="{{searchValue}}"
+      bindconfirm="handleEnter"></input>
     </view>
-    <view class="cancel">
+    <view class="cancel" bindtap="handleCancle">
       取消
     </view>
     <!-- 模糊搜索列表 -->
@@ -22,11 +23,12 @@
   <view class="historySearch">
     <view class="top">
       <text>历史搜索</text>
-      <icon type="clear" size="18"></icon>
+      <icon type="clear" size="18" bindtap="handleDel"></icon>
     </view>
     <view class="historylist">
-      <navigator url=""  class="item">喜爱哦米</navigator>
-      <navigator url=""  class="item">喜爱米</navigator>
+      <block wx:for="{{historylist}}" wx:key="index">
+        <navigator url="/pages/goods_list/index?keyword={{item}}"  class="item">{{item}}</navigator>
+      </block>
     </view>
   </view>
 </view>
