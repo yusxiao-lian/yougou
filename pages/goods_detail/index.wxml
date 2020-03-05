@@ -1,0 +1,63 @@
+<!--pages/goods_detail/index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+   <swiper indicator-dots class="swiper">
+    <block wx:for="{{productDetail.pics}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.pics_big}}" mode="aspectFill"
+        bindtap="previewImg" data-index="{{index}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 详情 -->
+  <view class="productInfo">
+    <view class="price">￥{{productDetail.goods_price}}</view>
+    <view class="productTitle">
+      <view class="productName">{{productDetail.goods_name}}</view>
+      <view class="collection">
+        <view class="iconfont icon-shoucang"></view>
+        <text>收藏</text>
+      </view>
+    </view>
+    <view class="express"><text>快递：</text>免运费</view>
+  </view>
+  <!-- 商品规格详情 -->
+  <view class="tab">
+    <block wx:for="{{['详情', '规格']}}" wx:key="index">
+      <view class="{{currentIndex == index? 'active' : ''}}"
+      bindtap="handleSelect" data-index="{{index}}">{{item}}</view>
+    </block>
+  </view>
+  <view class="content">
+    <!-- // 详情 -->
+    <rich-text  
+      wx:if="{{currentIndex === 0}}" 
+      nodes="{{productDetail.goods_introduce}}"></rich-text>
+    <!-- 规格 -->
+    <view  wx:if="{{currentIndex === 1}}" class="spec">
+      <block wx:for="{{productDetail.attrs}}" wx:key="index">
+        <view>
+          <text class="name">{{item.attr_name}}</text>
+          <text class="info">{{item.attr_vals}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 底部 -->
+  <view class="bottom">
+    <view class="contact">
+      <view class="iconfont icon-kefu"></view>
+      <text>联系客服</text>
+    </view>
+    <view class="cart">
+      <view class="iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </view>
+    <view class="addCart" bindtap="goToCart">加入购物车</view>
+    <view class="buyNow" bindtap="goToCart">立即购买</view>
+    <!-- 联系客服 -->
+    <view class="contactBox">
+      <button open-type="contact"></button>
+    </view>
+  </view>
+</view>

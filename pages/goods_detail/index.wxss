@@ -1,0 +1,120 @@
+/* pages/goods_detail/index.wxss */
+.swiper{
+  width: 100%;
+  height: 750rpx;
+}
+.swiper image{
+  width: 100%;
+  height: 750rpx;
+}
+.productInfo{
+  padding: 20rpx;
+  
+}
+.productInfo .price{
+  color: #eb4450;
+  font-size: 40rpx;
+}
+.productTitle{
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: space-between;
+}
+.productTitle .productName{
+  flex:1;
+  padding-right: 20rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.productTitle .collection{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  color: #999999;
+  border-left: 1px #999 solid;
+}
+.productTitle .collection text{
+  font-size: 13px;
+}
+.productInfo .express{
+  color: #999999;
+  font-size: 18px;
+  padding: 20rpx 0;
+}
+.productInfo .express text{
+  margin-right: 10rpx;
+}
+.tab{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+}
+.tab view{
+  width: 50%;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background: rgb(247, 244, 244);
+}
+.tab .active{
+  background: #ccc;
+}
+.content{
+  padding: 0 20rpx;
+}
+.spec view{
+  line-height: 2;
+}
+.spec view .name{
+  margin-right: 50rpx;
+}
+.spec .info{
+  color: #999;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  height: 100rpx;
+  width: 750rpx;
+  align-items: center;
+}
+.bottom .contact,.bottom .cart{
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.bottom .addCart,.buyNow{
+  width: 30%;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+}
+.bottom .addCart{
+  background: #f4b73f;
+}
+.buyNow{
+  background: #eb4450;
+}
+.contactBox{
+  background: black;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  opacity: 0;
+}
+.contactBox button{
+  height: 100%;
+  width: 100%;
+}
