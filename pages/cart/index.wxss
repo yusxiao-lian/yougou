@@ -1,1 +1,155 @@
 /* pages/cart/index.wxss */
+
+.address {
+    border-bottom: 20rpx #f4f4f4 solid;
+}
+
+.address .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* line-height: 3; */
+    padding: 20rpx 40rpx 0 20rpx;
+}
+
+.address .addressDetail {
+    padding: 0 20rpx;
+    margin-top: 20rpx;
+}
+
+.address .userInfo .phone {
+    display: flex;
+    align-items: center;
+    
+}
+
+.address .userInfo .phone::after {
+    display: block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-left: 1px #999 solid;
+    border-top: 1px #999 solid;
+    transform: rotate(145deg);
+    margin-left: 10px;
+}
+
+.address image {
+    display: block;
+    height: 15rpx;
+    width: 100%;
+    margin-top: 40rpx;
+    margin-right: 20rpx;
+}
+
+.title {
+    display: flex;
+    padding: 20rpx;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    
+}
+.nonExistent{
+    height: 300rpx;
+    text-align: center;
+    line-height: 300rpx;
+    color: #999;
+    font-size: 18px;
+}
+.cartlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20rpx;
+    padding-left: 40rpx;
+}
+.cartlist .content{
+    flex: 1;
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 20rpx;
+}
+.cartlist image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 20rpx;
+}
+.goodsinfo .goodsname{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.cartlist .goodsinfo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10rpx;
+}
+.cartlist .price input{
+    width: 40rpx;
+    height: 10px;
+    text-align: center;
+    margin: 0 10rpx;
+}
+.cartlist .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60rpx;
+}
+.goodsinfo .number{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 22px;
+    font-size: 14px;
+}
+.goodsinfo .money text{
+    font-size: 14px;
+}
+.goodsinfo .money{
+    color: #eb4450;
+}
+.goodsinfo .number .calc-btn{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 1px #999 solid;
+    justify-content: center;
+    align-items: center;
+}
+.account{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    height: 100rpx;
+    width: 100%;
+}
+.account .checkAll{
+    padding: 20rpx 40rpx;
+}
+.account .totalPrice text{
+    color: #eb4450;
+}
+.account .totalPrice text text{
+    font-size: 16px;
+}
+.account .totalPrice .freight{
+    color: #999;
+    font-size: 14px;
+}
+.account .accountbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eb4450;
+    color: #fff;
+    height: 100%;
+    width: 30%;
+    
+}

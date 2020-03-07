@@ -51,10 +51,10 @@
     </view>
     <view class="cart">
       <view class="iconfont icon-gouwuche"></view>
-      <text>购物车</text>
+      <text bindtap="goToCart">购物车</text>
     </view>
-    <view class="addCart" bindtap="goToCart">加入购物车</view>
-    <view class="buyNow" bindtap="goToCart">立即购买</view>
+    <view class="addCart" bindtap="addCart">加入购物车</view>
+    <view class="buyNow" bindtap="addCart">立即购买</view>
     <!-- 联系客服 -->
     <view class="contactBox">
       <button open-type="contact"></button>

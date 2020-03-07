@@ -1,2 +1,74 @@
 <!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<view class="container">
+    <!-- 收获人信息 -->
+    <view class="address" wx:if="{{address.username}}">
+        <view class="userInfo">
+            <view class="name">
+                <text>收货人：</text> {{address.username}}
+            </view>
+            <view class="phone">{{address.tel}}</view>
+        </view>
+        <view class="addressDetail">收获地址：{{address.useraddress}}</view>
+
+        <image mode="aspectFill" src="../../images/cart_border@2x.png"></image>
+    </view>
+    <!-- 获取收货地址 -->
+    <view class="address" wx:if="{{!address.username}}">
+        <view class="userInfo" bindtap="getAddress">
+            <view class="name">
+                <text>获取收货地址</text>
+            </view>
+            <view class="phone"></view>
+        </view>
+        <image mode="aspectFill" src="../../images/cart_border@2x.png"></image>
+    </view>
+    <!-- title -->
+    <view class="title">
+        <view class="iconfont icon-dianpu"></view>
+        优购生活馆
+    </view >
+    <!-- 如果没有商品 -->
+    <view class="nonExistent" wx:if="{{!goodsList.length}}">空空如也~~~</view>
+    <!-- 购物车商品列表 -->
+    <view class="cartlist"  wx:for="{{goodsList}}" wx:key="index" wx:if="{{goodsList.length}}">
+        <block>
+            <icon type="success" color="red"></icon>
+            <view class="content">
+                <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
+                <!-- 右侧文字信息 -->
+                <view class="goodsinfo">
+                    <view class="goodsname">{{item.goods_name}}</view>
+                    <view class="price">
+                        <view class="money">
+                            <text>￥</text>{{item.goods_price}}
+                        </view>
+                        <view class="number">
+                            <view class="calc-btn">+</view>
+                            <input value="{{item.number}}"></input>
+                            <view class="calc-btn">-</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- 底部结算 -->
+    <view class="account">
+        <view class="checkAll">
+            <icon type="success" color="red"></icon>
+            全选
+        </view>
+        <view class="totalPrice">
+            <view>
+                合计：
+                <text>
+                    <text>￥</text>{{totalPrice}}
+                </text>
+            </view>
+            <view class="freight">半酣运费</view>
+        </view>
+        <view class="accountbtn">
+            结算(3)
+        </view>
+    </view>
+</view>
