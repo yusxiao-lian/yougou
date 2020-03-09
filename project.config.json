@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.6.6",
-	"appid": "wxc62348fc77d5a0d1",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "yougou",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
@@ -39,8 +39,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/cart/index",
-					"pathName": "pages/cart/index",
+					"name": "pages/order_enter/index",
+					"pathName": "pages/order_enter/index",
 					"query": "id= 47869",
 					"scene": null
 				}

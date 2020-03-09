@@ -1,0 +1,6 @@
+<!--pages/authorize/index.wxml-->
+<view class="container">
+    <image src="../../images/reg_logo@2x.png"></image>
+    <view class="text">优购商城，专注高品质生活！</view>
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="handleUserInfo">获取授权</button>
+</view>

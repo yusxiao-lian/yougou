@@ -1,0 +1,15 @@
+/* pages/authorize/index.wxss */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container image{
+    width: 200rpx;
+    height: 200rpx;
+}
+.text{
+    margin-bottom: 50rpx;
+}
