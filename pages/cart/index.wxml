@@ -32,7 +32,7 @@
     <!-- 购物车商品列表 -->
     <view class="cartlist"  wx:for="{{goodsList}}" wx:key="index" wx:if="{{goodsList.length}}">
         <block>
-            <icon type="success" color="red"></icon>
+            <icon type="success" color="{{item.selected? 'red' : 'gray'}}" bindtap="handleSelect" data-index="{{index}}"></icon>
             <view class="content">
                 <image src="{{item.goods_small_logo}}" mode="aspectFill"></image>
                 <!-- 右侧文字信息 -->
@@ -43,9 +43,12 @@
                             <text>￥</text>{{item.goods_price}}
                         </view>
                         <view class="number">
-                            <view class="calc-btn">+</view>
-                            <input value="{{item.number}}"></input>
-                            <view class="calc-btn">-</view>
+                            <view class="calc-btn" bindtap="handleNumber" 
+                            data-number="{{-1}}" data-index="{{index}}">-</view>
+                            <input value="{{item.number}}" type="number"
+                            bindblur="handleBlur" data-index="{{index}}"></input>
+                            <view class="calc-btn" bindtap="handleNumber"
+                            data-number="{{1}}" data-index="{{index}}">+</view>
                         </view>
                     </view>
                 </view>
@@ -55,7 +58,7 @@
     <!-- 底部结算 -->
     <view class="account">
         <view class="checkAll">
-            <icon type="success" color="red"></icon>
+            <icon type="success" color="{{selectAll?'red':'gray'}}" bindtap="handleSelectAll"></icon>
             全选
         </view>
         <view class="totalPrice">
@@ -65,7 +68,7 @@
                     <text>￥</text>{{totalPrice}}
                 </text>
             </view>
-            <view class="freight">半酣运费</view>
+            <view class="freight">包含运费</view>
         </view>
         <view class="accountbtn">
             结算(3)

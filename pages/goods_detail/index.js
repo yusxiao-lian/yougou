@@ -87,7 +87,8 @@ Page({
                 goods_price: this.data.productDetail.goods_price,
                 goods_name: this.data.productDetail.goods_name,
                 goods_small_logo: this.data.productDetail.goods_small_logo,
-                number: 1
+                number: 1,
+                selected: true
             })
             wx.showToast({
                 title: '加入成功',
